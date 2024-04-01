@@ -1,0 +1,146 @@
+﻿@page
+@model RazorPagesMovie.Pages.PortfolioModel
+@{
+    ViewData["Title"] = "Portfolio";
+}
+
+<div class="banner-area banner-bg-1">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="banner">
+					<h2>@Model.contentService.Get("Banner.Title")</h2>
+					<ul class="page-title-link">
+                        <li><a href="#">@Model.contentService.Get("Banner.MainPage")</a></li>
+                        <li><a href="#">@Model.contentService.Get("Banner.ThisPage")</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="portfolio" class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>@Model.contentService.Get("Header.Title")</h3>
+            <p class="lead">@Model.contentService.Get("Header.Description[0]") <br>@Model.contentService.Get("Header.Description[1]")</p>
+        </div><!-- end title -->
+    </div><!-- end container -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="portfolio-filter text-center">
+                    <ul>
+                        <li><a class="btn btn-dark btn-radius btn-brd active" href="#" data-filter="*"><span class="oi hidden-xs" data-glyph="grid-three-up"></span> @Model.contentService.Get("Filters[0]")</a></li>
+                        <li><a class="btn btn-dark btn-radius btn-brd" data-toggle="tooltip" data-placement="top" title="5" href="#" data-filter=".cat1">@Model.contentService.Get("Filters[1]")</a></li>
+                        <li><a class="btn btn-dark btn-radius btn-brd" href="#" data-toggle="tooltip" data-placement="top" title="12" data-filter=".cat2">@Model.contentService.Get("Filters[2]")</a></li>
+                        <li><a class="btn btn-dark btn-radius btn-brd" href="#" data-toggle="tooltip" data-placement="top" title="21" data-filter=".cat3">@Model.contentService.Get("Filters[3]")</a></li>
+                        <li><a class="btn btn-dark btn-radius btn-brd" href="#" data-toggle="tooltip" data-placement="top" title="11" data-filter=".cat4">@Model.contentService.Get("Filters[4]")</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <hr class="invis">
+
+        <div id="da-thumbs" class="da-thumbs portfolio">
+            <div class="post-media pitem item-w1 item-h1 cat1">
+                <a href="@Model.contentService.Get("ProjectCards[0].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[0].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[0].Title") <small>@Model.contentService.Get("ProjectCards[0].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="post-media pitem item-w1 item-h1 cat2">
+                <a href="@Model.contentService.Get("ProjectCards[1].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[1].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[1].Title") <small>@Model.contentService.Get("ProjectCards[1].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="post-media pitem item-w1 item-h1 cat1">
+                <a href="@Model.contentService.Get("ProjectCards[2].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[2].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[2].Title") <small>@Model.contentService.Get("ProjectCards[2].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="post-media pitem item-w1 item-h1 cat4">
+                <a href="@Model.contentService.Get("ProjectCards[3].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[3].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[3].Title") <small>@Model.contentService.Get("ProjectCards[3].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="post-media pitem item-w1 item-h1 cat3">
+                <a href="@Model.contentService.Get("ProjectCards[4].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[4].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[4].Title") <small>@Model.contentService.Get("ProjectCards[4].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="post-media pitem item-w1 item-h1 cat2">
+                <a href="@Model.contentService.Get("ProjectCards[5].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[5].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[5].Title") <small>@Model.contentService.Get("ProjectCards[5].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="post-media pitem item-w1 item-h1 cat1">
+                <a href="@Model.contentService.Get("ProjectCards[6].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[6].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[6].Title") <small>@Model.contentService.Get("ProjectCards[6].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="post-media pitem item-w1 item-h1 cat4">
+                <a href="@Model.contentService.Get("ProjectCards[7].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[7].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[7].Title") <small>@Model.contentService.Get("ProjectCards[7].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="post-media pitem item-w1 item-h1 cat3">
+                <a href="@Model.contentService.Get("ProjectCards[8].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[8].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[8].Title") <small>@Model.contentService.Get("ProjectCards[8].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="post-media pitem item-w1 item-h1 cat2">
+                <a href="@Model.contentService.Get("ProjectCards[9].ImagePath")" data-rel="prettyPhoto[gal]">
+                    <img src="@Model.contentService.Get("ProjectCards[9].ImagePath")" alt="" class="img-responsive">
+                    <div>
+                        <h3>@Model.contentService.Get("ProjectCards[9].Title") <small>@Model.contentService.Get("ProjectCards[9].Subtitle")</small></h3>
+                        <i class="flaticon-unlink"></i>
+                    </div>
+                </a>
+            </div>
+        </div><!-- end portfolio -->
+    </div><!-- end container -->
+</div>
+
+<partial name="Shared/_Services.cshtml" />
+
+<partial name="Shared/_Testimonials.cshtml" />
